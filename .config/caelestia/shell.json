@@ -1,0 +1,180 @@
+{
+    "appearance": {
+        "anim": {
+            "durations": {
+                "scale": 0.5883499045849538
+            }
+        },
+        "padding": {
+            "scale": 0.8100853645638244
+        },
+        "rounding": {
+            "scale": 0.9052828530089496
+        },
+        "spacing": {
+            "scale": 0.6741656213918895
+        },
+        "transparency": {
+            "base": 0.8303456868210884,
+            "enabled": true,
+            "layers": 0.3754896005420838
+        }
+    },
+    "background": {
+        "desktopClock": {
+            "background": {
+                "enabled": true,
+                "opacity": 0.7040875019876002
+            },
+            "enabled": false,
+            "invertColors": false,
+            "position": "bottom-right",
+            "shadow": {
+                "blur": 0.40812996416339264,
+                "enabled": true
+            }
+        },
+        "enabled": true,
+        "visualiser": {
+            "enabled": true
+        },
+        "wallpaperEnabled": true
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": false,
+            "showOnHover": false
+        },
+        "clock": {
+            "background": true,
+            "showDate": true,
+            "showIcon": true
+        },
+        "dragThreshold": 10,
+        "persistent": true,
+        "popouts": {
+            "activeWindow": false,
+            "statusIcons": true,
+            "tray": true
+        },
+        "showOnHover": false,
+        "status": {
+            "showAudio": true,
+            "showBattery": true,
+            "showBluetooth": true,
+            "showKbLayout": false,
+            "showLockStatus": false,
+            "showMicrophone": true,
+            "showNetwork": true,
+            "showWifi": true
+        },
+        "tray": {
+            "background": true,
+            "compact": true,
+            "recolour": true
+        },
+        "workspaces": {
+            "activeTrail": true,
+            "maxWindowIcons": 8,
+            "occupiedBg": false,
+            "perMonitorWorkspaces": true,
+            "showWindows": true,
+            "showWindowsOnSpecialWorkspaces": false,
+            "shown": 8
+        }
+    },
+    "border": {
+        "rounding": 26,
+        "thickness": 7
+    },
+    "dashboard": {
+        "dragThreshold": 1,
+        "enabled": true,
+        "performance": {
+            "showBattery": true
+        },
+        "showDashboard": true,
+        "showMedia": false,
+        "showOnHover": true,
+        "showPerformance": true,
+        "showWeather": true
+    },
+    "launcher": {
+        "dragThreshold": 1,
+        "enableDangerousActions": false,
+        "enabled": true,
+        "favouriteApps": [
+            "nwg-displays",
+            "code",
+            "cursor",
+            "st-stm32cubeide-1.19.0",
+            "antigravity",
+            "dev.zed.Zed-Preview"
+        ],
+        "hiddenApps": [
+            "bssh",
+            "bvnc",
+            "avahi-discover",
+            "cmake-gui",
+            "foot",
+            "foot-server",
+            "footclient",
+            "timeshift-gtk",
+            "qvidcap",
+            "qv4l2",
+            "libreoffice-math",
+            "libreoffice-impress",
+            "libreoffice-draw",
+            "libreoffice-base",
+            "uuctl",
+            "vim",
+            "yazi",
+            "htop",
+            "org.kde.dolphin"
+        ],
+        "maxShown": 9,
+        "showOnHover": true,
+        "useFuzzy": {
+            "actions": true,
+            "apps": true,
+            "schemes": true,
+            "variants": true,
+            "wallpapers": true
+        }
+    },
+    "notifs": {
+        "defaultExpireTimeout": 2000,
+        "fullscreen": "on",
+        "groupPreviewNum": 1,
+        "openExpanded": false
+    },
+    "services": {
+        "audioIncrement": 0.05,
+        "brightnessIncrement": 0.05,
+        "gpuType": "NVIDIA",
+        "smartScheme": true,
+        "useFahrenheit": false,
+        "useFahrenheitPerformance": false,
+        "useTwelveHourClock": true
+    },
+    "sidebar": {
+        "dragThreshold": 100,
+        "enabled": true
+    },
+    "utilities": {
+        "maxToasts": 1,
+        "toasts": {
+            "audioInputChanged": true,
+            "audioOutputChanged": true,
+            "capsLockChanged": true,
+            "chargingChanged": true,
+            "dndChanged": true,
+            "gameModeChanged": true,
+            "kbLayoutChanged": true,
+            "nowPlaying": true,
+            "numLockChanged": true,
+            "vpnChanged": true
+        }
+    }
+}

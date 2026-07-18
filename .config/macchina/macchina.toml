@@ -1,0 +1,18 @@
+interface = "wlan0"
+long_uptime = true
+long_shell = false
+long_kernel = false
+current_shell = true
+physical_cores = true
+memory_percentage = false
+theme = "FastArchPlus"
+show = [
+  "Distribution",
+  "Kernel",
+  "Processor",
+  "GPU",
+  "Shell",
+  "Memory",
+  "Packages",
+  "Uptime",
+]

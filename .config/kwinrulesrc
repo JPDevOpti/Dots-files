@@ -1,0 +1,14 @@
+[General]
+count=1
+rules=1
+
+[1]
+Description=Dolphin Kitty opacity
+opacityactive=78
+opacityactiverule=2
+opacityinactive=78
+opacityinactiverule=2
+types=1
+wmclass=dolphin
+wmclasscomplete=false
+wmclassmatch=1

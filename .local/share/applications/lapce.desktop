@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Lapce
+Comment=Native GUI Plugin-based Code Editor
+Exec=/home/jp/.local/bin/lapce %F
+Icon=lapce
+Type=Application
+Categories=Development;TextEditor;IDE;
+MimeType=text/plain;
+StartupNotify=true
