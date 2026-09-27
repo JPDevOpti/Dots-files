@@ -1,5 +1,0 @@
-# User overrides (loaded last)
-
-# Color picker: mover de Super+Shift+C (default caelestia) a Super+Shift+A
-unbind = Super+Shift, C
-bind = Super+Shift, A, exec, hyprpicker -a  # Colour picker (copia al portapapeles)
