@@ -1,0 +1,22 @@
+# Servicios no habilitados por defecto en Omarchy que este equipo tiene activos.
+# Verificado con: systemctl is-enabled <servicio> / systemctl --user is-enabled <servicio>
+# Formato: ámbito<TAB>servicio
+#
+# Instalación manual, por cada fila:
+#   ámbito=sistema -> sudo systemctl enable --now <servicio>
+#   ámbito=usuario -> systemctl --user enable --now <servicio>
+# Las unidades propias de este repo (services/.config/systemd/user/) deben
+# estar copiadas primero (ver services/README.md); el resto las instalan
+# sus propios paquetes o plugins.
+
+sistema	mariadb.service
+sistema	mongodb.service
+sistema	proton.VPN.service
+sistema	supergfxd.service
+sistema	ufw.service
+sistema	docker.socket
+sistema	bluetooth.service
+usuario	hyprmoncfgd.service
+usuario	voxtype.service
+usuario	openclaw-gateway.service
+usuario	bt-agent.service

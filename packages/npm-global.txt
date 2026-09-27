@@ -1,0 +1,7 @@
+# Paquetes npm globales (node gestionado por mise).
+# Se instalan siempre en su última versión (npm install -g <paquete>@latest);
+# no se fija ninguna versión.
+@colbymchenry/codegraph
+@kilocode/cli
+@mlllm/ui-ux-agent-skill-system
+ui-ux-pro-max-cli

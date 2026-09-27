@@ -1,0 +1,8 @@
+Línea de arranque del kernel (Limine), capturada desde /proc/cmdline.
+
+Los valores marcados como [REDACTADO] son específicos del disco cifrado
+actual (PARTUUID de LUKS y offset de la partición de hibernación/swap
+dentro del volumen Btrfs). Después de reinstalar, Limine y el hook de
+mkinitcpio los regeneran automáticamente; no los copies literalmente.
+
+rtc_cmos.use_acpi_alarm=1 resume=/dev/mapper/root resume_offset=[REDACTADO] quiet splash loglevel=0 systemd.show_status=false rd.udev.log_level=0 vt.global_cursor_default=0 cryptdevice=PARTUUID=[REDACTADO]:root root=/dev/mapper/root zswap.enabled=0 rootflags=subvol=@ rw rootfstype=btrfs initramfs_async=0

@@ -1,0 +1,29 @@
+# Repositorios git bajo ~/Projects, ~/Work y ~/Repositories.
+# Formato: ruta<TAB>remote-url<TAB>rama-actual
+#
+# Instalación manual, por cada fila:
+#   mkdir -p "$(dirname <ruta>)" && git clone <remote-url> <ruta>
+#   cd <ruta> && git checkout <rama-actual>  # si no es la rama por defecto del remoto
+
+/home/jpdevopti/Projects/DOFUS/dofustabs	https://github.com/JPDevOpti/DofusTabs.git	develop
+/home/jpdevopti/Projects/TallerV	https://github.com/JPDevOpti/TallerV.git	feat/paulboy-ui
+/home/jpdevopti/Projects/prueba-tecnica-LIME	https://github.com/ManuelaCG18/prueba-tecnica-LIME.git	main
+/home/jpdevopti/Repositories/Dots-files	git@github.com:JPDevOpti/Dots-files.git	main
+/home/jpdevopti/Repositories/Prueba_Lime	https://github.com/SayGuapix/Prueba_Lime.git	main
+/home/jpdevopti/Repositories/Shibumi-Shell	https://github.com/HANCORE-linux/Shibumi-Shell.git	main
+/home/jpdevopti/Work/HOGGU/Hoggu-app	https://github.com/HOGGUapp/Hoggu-app.git	backup-2026-07-18
+/home/jpdevopti/Work/HOGGU/Landing-page	https://github.com/HOGGUapp/Landing-page.git	develop
+/home/jpdevopti/Work/LIME/.github	https://github.com/UT-LIME-UdeA/.github.git	main
+/home/jpdevopti/Work/LIME/BIOTECH	https://github.com/UT-LIME-UdeA/BIOTECH.git	main
+/home/jpdevopti/Work/LIME/CONTIGOANTIOQUIA	https://github.com/UT-LIME-UdeA/CONTIGOANTIOQUIA.git	main
+/home/jpdevopti/Work/LIME/DERMOPAT	https://github.com/UT-LIME-UdeA/DERMOPAT.git	main
+/home/jpdevopti/Work/LIME/ENTERPRISE	https://github.com/UT-LIME-UdeA/ENTERPRISE.git	main
+/home/jpdevopti/Work/LIME/LIME	https://github.com/UT-LIME-UdeA/LIME.git	main
+/home/jpdevopti/Work/LIME/NETMEDICA	https://github.com/UT-LIME-UdeA/NETMEDICA.git	main
+/home/jpdevopti/Work/LIME/PATHSYS	https://github.com/UT-LIME-UdeA/PATHSYS.git	main
+/home/jpdevopti/Work/LIME/PDET	https://github.com/UT-LIME-UdeA/PDET.git	main
+/home/jpdevopti/Work/LIME/SYMPHONY	https://github.com/UT-LIME-UdeA/SYMPHONY.git	Refactor
+/home/jpdevopti/Work/LIME/TABLEROS/CONTIGOANTIOQUIA	https://github.com/UT-LIME-UdeA/CONTIGOANTIOQUIA.git	main
+/home/jpdevopti/Work/LIME/TABLEROS/PDET	https://github.com/UT-LIME-UdeA/PDET.git	main
+/home/jpdevopti/Work/LIME/TABLEROS/SYMPHONY	https://github.com/UT-LIME-UdeA/SYMPHONY.git	Refactor
+/home/jpdevopti/Work/LIME/TELESALUD	https://github.com/UT-LIME-UdeA/TELESALUD.git	product

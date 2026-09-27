@@ -1,0 +1,110 @@
+# Plugins de Omarchy shell instalados en este equipo.
+# Generado con: omarchy plugin list
+# Formato: id<TAB>estado<TAB>origen<TAB>url-o-nota
+#   origen=local   -> restaurado desde este repo (.config/omarchy/plugins/<id>)
+#   origen=terceros -> reinstalar con: omarchy plugin add <url>
+#   origen=primera-parte -> incluido con Omarchy, se activa con: omarchy plugin enable <id>
+#
+# Los 24 plugins hancore.shibumi.* provienen del repo
+# https://github.com/HANCORE-linux/Shibumi-Shell.git (clonado localmente en
+# ~/Repositories/Shibumi-Shell). Verificado con:
+#   diff -rq ~/.config/omarchy/plugins/hancore.shibumi.bar ~/Repositories/Shibumi-Shell/hancore.shibumi.bar
+# -> idénticos salvo el archivo de estado .shibumi-managed.json.
+# Procedimiento de instalación verificado (README.md del repo, 27-09-2026):
+# AUR (shibumi-shell) todavía no está publicado; la vía soportada mientras
+# tanto es la instalación desde fuente:
+#   sudo pacman -S --needed python jq curl networkmanager power-profiles-daemon \
+#     upower xdg-utils libnotify wl-clipboard ttf-material-symbols-variable \
+#     ttf-jetbrains-mono-nerd-basic noto-fonts-cjk adwaita-fonts
+#   git clone https://github.com/HANCORE-linux/Shibumi-Shell.git
+#   cd Shibumi-Shell && ./scripts/shibumi-suite install --yes
+#
+# Instalación manual del resto, por cada fila (comandos verificados con
+# omarchy plugin --help):
+#   origen=local     -> ya llega al copiar bar/.config/omarchy/plugins/ (ver bar/README.md); luego: omarchy plugin enable <id>
+#   origen=terceros  -> omarchy plugin add <url> && omarchy plugin enable <id>
+#   origen=primera-parte -> omarchy plugin enable <id>
+# (dejar deshabilitado, con "omarchy plugin disable <id>" si el estado marca "disabled")
+# Cuando el paquete AUR se publique: omarchy pkg aur add shibumi-shell && shibumi-shell install --yes
+
+akitaonrails.ai-usagebar	disabled	terceros	https://github.com/akitaonrails/ai-usagebar.git
+omarchy.active-window	disabled	primera-parte	incluido con Omarchy
+stappmus.activity-monitor	disabled	terceros	https://github.com/stappmus/omarchy-activity-monitor.git
+omarchy.agents	enabled	primera-parte	incluido con Omarchy
+local.arch-menu	enabled	local	restaurar desde este repo
+omarchy.audio	enabled	primera-parte	incluido con Omarchy
+omarchy.background	enabled	primera-parte	incluido con Omarchy
+omarchy.bar	disabled	primera-parte	incluido con Omarchy
+omarchy.battery	enabled	primera-parte	incluido con Omarchy
+omarchy.bluetooth	enabled	primera-parte	incluido con Omarchy
+omarchy.clipboard	enabled	primera-parte	incluido con Omarchy
+omarchy.clock	enabled	primera-parte	incluido con Omarchy
+local.collapser	enabled	local	restaurar desde este repo
+omarchy.dev-gallery	enabled	primera-parte	incluido con Omarchy
+omarchy.disk-speedtest	enabled	primera-parte	incluido con Omarchy
+omarchy.monitor	disabled	primera-parte	incluido con Omarchy
+local.dofus-workspaces	enabled	local	restaurar desde este repo
+omarchy.dropbox	disabled	primera-parte	incluido con Omarchy
+omarchy.emojis	enabled	primera-parte	incluido con Omarchy
+io.github.guiestrela.glassbar	enabled	terceros	https://github.com/guiestrela/glassbar.git
+meviusisback.hw-monitor	enabled	terceros	https://github.com/meviusisback/omarchy-hw-monitor.git
+im0001gt.hw-tooltip	disabled	terceros	https://github.com/IM0001GT/omarchy-hw-tooltip.git
+omarchy.idle	enabled	primera-parte	incluido con Omarchy
+omarchy.image-picker	enabled	primera-parte	incluido con Omarchy
+omarchy.indicators	enabled	primera-parte	incluido con Omarchy
+jesusarchive.keyboard-layout-switcher	enabled	terceros	https://github.com/jesusarchive/omarchy-keyboard-layout-switcher.git
+omarchy.keyboard-layout	enabled	primera-parte	incluido con Omarchy
+omarchy.lock	disabled	primera-parte	incluido con Omarchy
+io.github.sirjul1337.lock-explorer	enabled	terceros	https://github.com/SirJul1337/omarchy-lock-explorer.git
+omarchy.media	disabled	primera-parte	incluido con Omarchy
+omarchy.microphone	disabled	primera-parte	incluido con Omarchy
+io.github.feartheploto.musica	enabled	terceros	https://github.com/FearThePLOTO/Musica.git
+omarchy.network	enabled	primera-parte	incluido con Omarchy
+omarchy.nightlight	enabled	primera-parte	incluido con Omarchy
+omarchy.notifications	enabled	primera-parte	incluido con Omarchy
+olauncher	enabled	terceros	https://github.com/hisnameismarco/OLauncher.git
+io.github.twiking.omasettings	disabled	terceros	https://github.com/twiking/omasettings.git
+bobbynicholas.omaland	enabled	terceros	https://github.com/bobby-nicholas/omaland.git
+quickshell.spotify	disabled	terceros	https://github.com/stappmus/Omarchy-Spotify.git
+omarchy.menu	disabled	primera-parte	incluido con Omarchy
+omarchy.system-update	enabled	primera-parte	incluido con Omarchy
+omarchy.osd	enabled	primera-parte	incluido con Omarchy
+omaplug	enabled	terceros	https://github.com/fross100/omaplug.git
+omarchy.polkit	enabled	primera-parte	incluido con Omarchy
+omarchy.power	enabled	primera-parte	incluido con Omarchy
+omarchy.reminders	enabled	primera-parte	incluido con Omarchy
+agx.screen-time	disabled	terceros	https://github.com/ax1g/quickshell-screentime-plugin.git
+hancore.shibumi.ai	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.audio	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.bar	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.battery	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.bluetooth	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.brightness	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.cpu	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.center	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.control-center	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.gpu	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.media	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.memory	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.network	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.power-profile	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.power-state	enabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.quick-access	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.reactor	enabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.state	enabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.status	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.storage	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.telemetry	enabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.temperature	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.update-center	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+hancore.shibumi.workspaces	disabled	terceros	https://github.com/HANCORE-linux/Shibumi-Shell.git
+omarchy.spacer	disabled	primera-parte	incluido con Omarchy
+omarchy.speedtest	enabled	primera-parte	incluido con Omarchy
+harshith.system-monitor	disabled	terceros	https://github.com/Harshith292002/omarchy-system-monitor.git
+omarchy.tray	enabled	primera-parte	incluido con Omarchy
+omarchy.tailscale	disabled	primera-parte	incluido con Omarchy
+omarchy.weather	enabled	primera-parte	incluido con Omarchy
+omarchy.wifiqr	enabled	primera-parte	incluido con Omarchy
+local.workspace-dots	enabled	local	restaurar desde este repo
+omarchy.workspaces	disabled	primera-parte	incluido con Omarchy
+crmne.hyprmoncfg	enabled	terceros	https://github.com/crmne/omarchy-hyprmoncfg.git

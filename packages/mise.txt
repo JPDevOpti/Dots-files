@@ -1,0 +1,8 @@
+# Herramientas gestionadas por mise (~/.config/mise/config.toml).
+# Todas se instalan siempre en su última versión disponible (@latest);
+# ninguna versión concreta queda fijada aquí ni en el archivo de configuración.
+claude
+codex
+node
+opencode
+pi

@@ -1,0 +1,41 @@
+# Índices y estado local, nunca parte del repo.
+.codegraph/
+node_modules/
+__pycache__/
+*.log
+*.cache
+
+# Ruido de respaldo generado por herramientas del sistema.
+*.bak
+*.bak.*
+*.bak-*
+*.back
+*.pacnew
+*.sample
+*.backup
+*.omarchy-upgrade*
+
+# Lockfiles: este repo nunca fija versiones, así que tampoco rastrea
+# los archivos que las fijan.
+lazy-lock.json
+package-lock.json
+bun.lock
+bun.lockb
+pnpm-lock.yaml
+yarn.lock
+
+# Nunca deben terminar aquí, pase lo que pase.
+.credentials.json
+credentials.json
+*.pem
+id_*
+id_ed25519*
+id_rsa*
+*.key
+.ssh/
+.gnupg/
+.git-credentials
+.aws/
+.config/gh/
+.config/zaap/
+.config/Ankama/

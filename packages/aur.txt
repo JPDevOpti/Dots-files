@@ -1,0 +1,12 @@
+ai-usagebar-bin
+android-studio
+antigravity
+aws-session-manager-plugin
+hyprmoncfg-bin
+logiops
+mongodb-bin
+mongodb-compass-bin
+mongosh-bin
+ncurses5-compat-libs
+tableplus
+zen-browser-bin

@@ -1,63 +1,81 @@
-# 🛠️ Mis Dotfiles - Arch Linux (Hyprland / Caelestia)
+# Dots-files
 
-Este repositorio contiene las configuraciones personales (dotfiles) para mi entorno de escritorio en Arch Linux, administrado mediante Hyprland y la distribución **Caelestia**.
+Documentación y archivos de configuración del entorno de escritorio de
+`jpdevopti`: Omarchy (Arch Linux + Hyprland) en un portátil con NVIDIA RTX
+4050 + iGPU AMD, LUKS + Btrfs y Limine. Si este equipo se formatea, este
+repositorio permite reconstruirlo: qué software estaba instalado, cómo
+estaba configurado, y qué personalizaciones se hicieron sobre Omarchy por
+defecto.
 
-## 📁 Estructura del Repositorio
+Este repositorio **no contiene scripts propios**. Es documentación más los
+archivos de configuración reales, organizados por módulo; cada paso de
+instalación o restauración se hace a mano, siguiendo la guía escrita
+(`docs/`) y el README de cada módulo, con comandos `cp`/`sudo cp` estándar.
 
-El repositorio está organizado reflejando la estructura de directorios del usuario (`$HOME`):
+## Política: nada queda fijado en versión
 
-*   `.config/` - Archivos de configuración de aplicaciones (Kitty, Fuzzel, Thunar, cava, zed, nvim, etc.).
-*   `.local/share/caelestia/` - La distribución completa de Caelestia, donde residen los scripts del sistema, configuraciones principales de Hyprland y configuraciones de atajos de teclado (`hypr/hyprland/keybinds.conf`).
-*   `.local/share/applications/` - Lanzadores `.desktop` locales personalizados.
-*   `.zshrc` y `.p10k.zsh` - Configuración de la shell Zsh con Powerlevel10k.
-*   `.tmux.conf` - Configuración de Tmux con gestor de plugins (TPM).
-*   `.gitconfig` - Configuración global de Git.
-*   `dconf_backup.ini` - Volcado del registro GSettings (dconf) para almacenar atajos gráficos globales, configuraciones de ratón/teclado y preferencias del sistema.
+Este repositorio nunca fija una versión concreta de paquete, herramienta o
+dependencia propia (pacman, AUR, mise, npm global): todo se instala siempre
+en su versión más reciente disponible en el momento de restaurar
+(`omarchy pkg add`, `mise use -g <tool>@latest`, `npm install -g <pkg>@latest`).
+La contrapartida es que una restauración puede traer versiones más nuevas
+que las que estaban probadas la última vez que se hizo el backup — por eso
+el checklist de verificación final en `docs/02-instalacion-desde-cero.md`
+importa: no basta con "se instaló", hay que comprobar que funciona.
 
----
+## Módulos
 
-## 🚀 Cómo Utilizar los Scripts
+Cada componente vive en su propio directorio, con las rutas relativas a
+`$HOME` dentro (por ejemplo `alacritty/.config/alacritty/alacritty.toml`
+restaura a `~/.config/alacritty/alacritty.toml`). El README de cada módulo
+trae su propia sección "Instalación manual" con los comandos `cp` exactos.
 
-He incluido scripts automatizados para facilitar la sincronización y la instalación en nuevos equipos.
+| Módulo | Qué es |
+|---|---|
+| [`hyprland/`](hyprland/README.md) | Compositor Hyprland: config Lua, idle, lock, sunset, scripts |
+| [`monitors/`](monitors/README.md) | Perfiles de hyprmoncfg y configuración de nwg-displays |
+| [`alacritty/`](alacritty/README.md) | Terminal Alacritty |
+| [`terminal/`](terminal/README.md) | Foot y tmux |
+| [`shell/`](shell/README.md) | Bash y starship |
+| [`bar/`](bar/README.md) | Barra de Omarchy shell: layout, hooks, plugins locales |
+| [`wallpapers/`](wallpapers/README.md) | Fondos de pantalla de Omarchy |
+| [`theme/`](theme/README.md) | Temas añadidos, branding, pantalla de bloqueo, GTK, fuentes, dconf |
+| [`editors/`](editors/README.md) | Neovim, Zed, VS Code |
+| [`ai/`](ai/README.md) | Claude Code, OpenCode, Gentle AI |
+| [`apps/`](apps/README.md) | Lanzadores, scripts personales, utilidades varias |
+| [`devtools/`](devtools/README.md) | Git y mise |
+| [`input/`](input/README.md) | Solaar (MX Master), fcitx5, voxtype |
+| [`audio/`](audio/README.md) | WirePlumber |
+| [`services/`](services/README.md) | Unidades systemd de usuario y environment.d |
 
-### 1. Hacer Copia de Seguridad (Backup)
+Además: [`system/`](system/README.md) (copias de archivos de `/etc`, de
+solo lectura y aplicación manual con `sudo cp`),
+[`packages/`](packages/README.md) y `manifests/` (listas planas generadas
+del sistema, para reinstalar a mano) y `docs/` (guías paso a paso).
 
-Para actualizar tu copia de seguridad local con las configuraciones actuales del sistema, ejecuta desde la carpeta del repositorio:
+## Mantener el repo al día
+
+No hay script de backup: actualizar el repo es copiar a mano, desde el
+sistema vivo hacia el repo, cada archivo que cambió.
 
 ```bash
-chmod +x backup.sh
-./backup.sh
+# Por cada módulo que cambió, copiar del sistema al repo (ejemplo con alacritty)
+cp ~/.config/alacritty/alacritty.toml ~/Repositories/Dots-files/alacritty/.config/alacritty/alacritty.toml
+
+# Revisar qué cambió y publicar
+cd ~/Repositories/Dots-files
+git status
+git diff
+git add -A && git commit -m "..." && git push
 ```
 
-El script se encargará de:
-*   Copiar los archivos de configuración actualizados.
-*   Ignorar carpetas temporales, de caché (`Cache`, `GPUCache`, etc.) y directorios `.git` internos para mantener el repositorio limpio.
-*   Hacer un volcado de tu base de datos `dconf` a `dconf_backup.ini`.
+El procedimiento completo, módulo por módulo, y el chequeo de secretos
+antes de commitear están en
+[`docs/01-antes-de-formatear.md`](docs/01-antes-de-formatear.md).
 
-Una vez termine, puedes hacer push a tu repositorio remoto:
-```bash
-git add .
-git commit -m "update: copia de seguridad de dotfiles"
-git push origin main
-```
+## Guía completa
 
----
-
-### 2. Restaurar Configuraciones (Restore)
-
-Para aplicar las configuraciones de este repositorio en tu sistema actual (o en un equipo nuevo con Caelestia instalado):
-
-```bash
-chmod +x restore.sh
-./restore.sh
-```
-
-*(O usa `./restore.sh --yes` para no pedir confirmación)*
-
-El script se encargará de:
-*   Copiar los dotfiles de vuelta a sus respectivas ubicaciones en `~` y `~/.config/`.
-*   Restaurar la carpeta completa `~/.local/share/caelestia/`.
-*   Recrear de forma segura los enlaces simbólicos de Caelestia (`~/.config/hypr`, `~/.config/fish`, `~/.config/foot`, `~/.config/fastfetch` y `~/.config/btop`).
-*   Restaurar los lanzadores de aplicaciones locales (`.desktop`).
-*   Importar las configuraciones gráficas usando `dconf`.
-*   Clonar de manera automática los plugins necesarios de **Oh-My-Zsh** (`zsh-autosuggestions`, `zsh-syntax-highlighting`, `zsh-history-substring-search`, `fzf-tab` y el tema `powerlevel10k`) y de **Tmux** (`TPM`) si no están instalados.
+1. [Antes de formatear](docs/01-antes-de-formatear.md)
+2. [Instalación desde cero](docs/02-instalacion-desde-cero.md)
+3. [Personalizaciones](docs/03-personalizaciones.md) — índice hacia cada README de módulo
+4. [Problemas conocidos](docs/04-problemas-conocidos.md)

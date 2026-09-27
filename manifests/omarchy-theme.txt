@@ -1,0 +1,54 @@
+# Tema activo y temas instalados en este equipo.
+# Generado con: omarchy theme current / omarchy theme list
+# Comando de instalación de un tema desde git: omarchy theme install <git-repo-url>
+
+tema-actual: Saga
+
+## Temas de stock (vienen con Omarchy, no requieren nada)
+Catppuccin
+Catppuccin Latte
+Ethereal
+Everforest
+Flexoki Light
+Gruvbox
+Hackerman
+Kanagawa
+Last Horizon
+Lumon
+Lupine
+Matte Black
+Miasma
+Nord
+Osaka Jade
+Retro 82
+Ristretto
+Rose Pine
+Solitude
+Tokyo Night
+Vantablack
+White
+
+## Temas añadidos, con clon git (reinstalar con: omarchy theme install <url>)
+# Formato: nombre-directorio<TAB>url
+city-783	https://github.com/OldJobobo/omarchy-city-783-theme
+greek-noir	https://github.com/HANCORE-linux/omarchy-greek-noir-theme.git
+oligarchy	https://github.com/EF-Code/omarchy-oligarchy-theme.git
+saga	https://github.com/HANCORE-linux/omarchy-saga-theme.git
+
+## Temas añadidos sin remoto git (generados a mano, se restauran desde este repo)
+# Copiados en .config/omarchy/themes/<nombre>/ (~15M en total)
+wallhaven-9okxwk
+wallhaven-mlozx9
+wallhaven-xekz3v
+
+## Nota sobre "aether"
+`~/.config/omarchy/themes/aether` es un directorio real, vacío (0 archivos,
+no es symlink). No hay nada que copiar ni que reinstalar desde él; si hace
+falta un tema "aether" real, no hay evidencia en este equipo de su origen.
+
+## Instalación manual
+1. `omarchy theme install <url>` por cada fila de la sección de temas con
+   clon git.
+2. Copiar `.config/omarchy/themes/wallhaven-*` desde este repo a mano (ver
+   `theme/README.md`).
+3. `omarchy theme set Saga`
