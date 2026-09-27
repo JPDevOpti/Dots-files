@@ -1,0 +1,156 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__codegraph__*",
+      "Bash(ssh *)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(sudo rm -rf /)",
+      "Bash(rm -rf ~)",
+      "Bash(sudo rm -rf ~)",
+      "Read(.ssh/*)",
+      "Edit(.ssh/*)",
+      "Read(.credentials/*)",
+      "Edit(.credentials/*)",
+      "Read(Library/Keychains/*)",
+      "Edit(Library/Keychains/*)",
+      "Read(.aws/credentials)",
+      "Edit(.aws/credentials)",
+      "Read(.config/gh/hosts.yml)",
+      "Edit(.config/gh/hosts.yml)",
+      "Read(**/*.pem)",
+      "Edit(**/*.pem)",
+      "Read(**/*.key)",
+      "Edit(**/*.key)",
+      "Read(**/secrets/*)",
+      "Edit(**/secrets/*)"
+    ],
+    "defaultMode": "bypassPermissions"
+  },
+  "model": "claude-fable-5-1",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "gentle-ai review stop-hook --agent claude-code",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "gentle-ai review stop-hook --agent claude-code",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codegraph prompt-hook"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "gentle-ai skill-registry refresh --quiet --no-gitignore --cwd \"${CLAUDE_PROJECT_DIR:-$PWD}\" || true"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "aws-agentic-ai@aws-skills": true,
+    "aws-common@aws-skills": true,
+    "aws-cost-ops@aws-skills": true,
+    "aws-iac@aws-skills": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "engram@engram": true,
+    "serverless-eda@aws-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "aws-skills": {
+      "source": {
+        "source": "github",
+        "repo": "zxkane/aws-skills"
+      }
+    },
+    "engram": {
+      "source": {
+        "source": "github",
+        "repo": "Gentleman-Programming/engram"
+      }
+    }
+  },
+  "outputStyle": "Gentleman",
+  "effortLevel": "low",
+  "modelSettings": {
+    "claude-fable-5": {
+      "effortLevel": "high"
+    },
+    "claude-fable-5-1": {
+      "effortLevel": "high"
+    },
+    "claude-opus-5": {
+      "effortLevel": "low"
+    },
+    "claude-sonnet-5": {
+      "effortLevel": "low"
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Bash(cd frontend && npm run typecheck:*)"
+    ],
+    "soft_deny": [
+      "$defaults",
+      "Bash(npm test:*) in this repo — tests are user-driven per CLAUDE.md, not auto-run",
+      "Bash(pytest:*) in this repo — requires MongoDB Atlas and is user-driven per CLAUDE.md",
+      "Mongo operations resolving to localhost/127.0.0.1 in this repo — CLAUDE.md mandates Atlas-only and to stop and warn if URI resolves to localhost"
+    ],
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: Private — JPDevOpti/TELEMEDICINA (github.com)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured — `.env`, `.env.*` gitignored (except `.env.example`/`.env*.example`); `backend/.env`, `backend/.env.example`, `frontend/.env.local` present as sensitive-looking paths",
+      "**Default / protected branches**: Default branch `main`; no protected branches listed (rulesets not queryable here — do not assume unprotected)",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Source control**: The trusted repo (JPDevOpti/TELEMEDICINA on github.com) and its `origin` remote only — no additional orgs configured",
+      "**Trusted internal domains**: telemedicina-backend-0uhd.onrender.com, telemedicina.laboratorios-lime.com (this project's contacted hosts)",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: telemedicina-backend-0uhd.onrender.com (Render-hosted backend), telemedicina.laboratorios-lime.com (production frontend/domain)",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: `backend/.env`, `backend/.env.example`, `frontend/.env.local` (credentials/config); MongoDB Atlas data (patients, clinical/EHR records, RIPS/EPS/REPS/RETHUS regulated health data) — share only with audiences cleared at the [named+specifics] bar; never localhost, only Atlas per repo rule",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any host/namespace with `prod`/`production` as a whole word/segment; MongoDB Atlas (production data store per repo rule — no localhost fallback permitted); telemedicina.laboratorios-lime.com (production-facing domain)",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development (full-stack telemedicine platform — FastAPI/MongoDB backend, Next.js frontend)",
+      "**Trusted repo**: /home/jpdevopti/Work/LIME/TELEMEDICINA (JPDevOpti/TELEMEDICINA, private) and its `origin` remote",
+      "**Org-specific CLIs**: None configured",
+      "routine under backend/ and frontend/ prefixes within this repo (typecheck, dev servers) is expected working activity per CLAUDE.md"
+    ]
+  }
+}

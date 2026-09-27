@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=DofusTabs
+Comment=Switch between Dofus game clients with hotkeys
+Exec=dofustabs
+Icon=dofustabs
+Terminal=false
+Categories=Game;Utility;
+Keywords=dofus;multibox;accounts;
+StartupWMClass=dofustabs

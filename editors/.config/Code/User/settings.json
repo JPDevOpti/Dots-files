@@ -1,0 +1,67 @@
+{
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "chat.tools.autoApprove": true,
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.preferredLocation": "panel",
+  "codeium.enableCodeLens": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "fish": true,
+    "qml": true
+  },
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "doxdocgen.generic.boolReturnsTrueFalse": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.inlayHints.enabled": "off",
+  "editor.minimap.autohide": "mouseover",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "trailing",
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "files.autoSave": "afterDelay",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "mssql.autoDisableNonTSqlLanguageService": true,
+  "mssql.connectionGroups": [
+    {
+      "id": "ROOT",
+      "name": "ROOT"
+    }
+  ],
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 4,
+  "python.languageServer": "Pylance",
+  "qt-qml.doNotAskForQmllsDownload": true,
+  "qt-qml.qmlls.additionalImportPaths": [
+    "/usr/lib/qt6/qml"
+  ],
+  "qt-qml.qmlls.customExePath": "/usr/bin/qmlls6",
+  "ruff.lineLength": 120,
+  "security.workspace.trust.startupPrompt": "always",
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.smoothScrolling": true,
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "workbench.colorTheme": "Omarchy",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.list.smoothScrolling": true
+}

@@ -1,0 +1,146 @@
+{
+  "name": "uno",
+  "created_at": "2026-09-25T12:02:41.980055748Z",
+  "updated_at": "2026-09-25T12:04:07.256161352Z",
+  "outputs": [
+    {
+      "key": "china star optoelectronics technology co., ltd|mng007qx2-1",
+      "match_key": "china star optoelectronics technology co., ltd|mng007qx2-1",
+      "name": "eDP-2",
+      "description": "China Star Optoelectronics Technology Co. Ltd MNG007QX2-1",
+      "make": "China Star Optoelectronics Technology Co., Ltd",
+      "model": "MNG007QX2-1",
+      "enabled": true,
+      "mode": "1920x1200@144.00Hz",
+      "width": 1920,
+      "height": 1200,
+      "refresh": 144.002,
+      "x": 2889,
+      "y": 1140,
+      "scale": 1,
+      "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
+    },
+    {
+      "key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@dp-3",
+      "match_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1",
+      "name": "DP-3",
+      "description": "Lenovo Group Limited LEN-A560-B LM238WF2-SSM1",
+      "make": "Lenovo Group Limited",
+      "model": "LEN-A560-B",
+      "serial": "LM238WF2-SSM1",
+      "enabled": true,
+      "mode": "1920x1080@60.16Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 60.16,
+      "x": 1920,
+      "y": 60,
+      "scale": 1,
+      "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
+    },
+    {
+      "key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@hdmi-a-1",
+      "match_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1",
+      "name": "HDMI-A-1",
+      "description": "Lenovo Group Limited LEN-A560-B LM238WF2-SSM1",
+      "make": "Lenovo Group Limited",
+      "model": "LEN-A560-B",
+      "serial": "LM238WF2-SSM1",
+      "enabled": true,
+      "mode": "1920x1080@60.16Hz",
+      "width": 1920,
+      "height": 1080,
+      "refresh": 60.16,
+      "x": 3840,
+      "y": 60,
+      "scale": 1,
+      "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
+    }
+  ],
+  "workspaces": {
+    "enabled": true,
+    "strategy": "interleave",
+    "max_workspaces": 9,
+    "group_size": 3,
+    "monitor_order": [
+      "china star optoelectronics technology co., ltd|mng007qx2-1",
+      "lenovo group limited|len-a560-b|lm238wf2-ssm1@dp-3",
+      "lenovo group limited|len-a560-b|lm238wf2-ssm1@hdmi-a-1"
+    ],
+    "rules": [
+      {
+        "workspace": "1",
+        "output_key": "china star optoelectronics technology co., ltd|mng007qx2-1",
+        "output_name": "eDP-2",
+        "default": true,
+        "persistent": true
+      },
+      {
+        "workspace": "2",
+        "output_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@dp-3",
+        "output_name": "DP-3",
+        "default": true,
+        "persistent": true
+      },
+      {
+        "workspace": "3",
+        "output_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@hdmi-a-1",
+        "output_name": "HDMI-A-1",
+        "default": true,
+        "persistent": true
+      },
+      {
+        "workspace": "4",
+        "output_key": "china star optoelectronics technology co., ltd|mng007qx2-1",
+        "output_name": "eDP-2"
+      },
+      {
+        "workspace": "5",
+        "output_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@dp-3",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "6",
+        "output_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@hdmi-a-1",
+        "output_name": "HDMI-A-1"
+      },
+      {
+        "workspace": "7",
+        "output_key": "china star optoelectronics technology co., ltd|mng007qx2-1",
+        "output_name": "eDP-2"
+      },
+      {
+        "workspace": "8",
+        "output_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@dp-3",
+        "output_name": "DP-3"
+      },
+      {
+        "workspace": "9",
+        "output_key": "lenovo group limited|len-a560-b|lm238wf2-ssm1@hdmi-a-1",
+        "output_name": "HDMI-A-1"
+      }
+    ]
+  },
+  "exec": ""
+}

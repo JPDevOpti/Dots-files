@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "local.workspace-dots",
+  "name": "Workspace Dots",
+  "version": "1.0.0",
+  "author": "local",
+  "description": "Workspace indicators rendered as dots instead of numbers",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Workspace Dots",
+    "description": "Workspace indicators rendered as dots",
+    "category": "Compositor",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}

@@ -1,0 +1,5 @@
+# BEGIN dofustabs-mouse
+---
+- Key: [Smart Shift, pressed]
+- Execute: [/home/jpdevopti/.local/bin/dofustabs, main]
+# END dofustabs-mouse

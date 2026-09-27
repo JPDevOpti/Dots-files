@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ankama Launcher
+Comment=Ankama portal and game launcher
+Exec=/home/jpdevopti/Applications/Dofus.AppImage --no-sandbox %U
+Terminal=false
+Type=Application
+Icon=ankama-launcher
+StartupWMClass=Ankama Launcher
+MimeType=x-scheme-handler/zaap;
+Categories=Game;

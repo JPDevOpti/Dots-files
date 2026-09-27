@@ -1,0 +1,128 @@
+{
+  "bar": {
+    "centerAnchor": "omarchy.clock",
+    "layout": {
+      "center": [
+        {
+          "id": "omarchy.clock"
+        }
+      ],
+      "left": [
+        {
+          "id": "local.arch-menu"
+        },
+        {
+          "id": "local.workspace-dots"
+        },
+        {
+          "id": "local.dofus-workspaces"
+        },
+        {
+          "id": "io.github.feartheploto.musica",
+          "barMode": "cava"
+        }
+      ],
+      "right": [
+        {
+          "id": "omarchy.indicators"
+        },
+        {
+          "id": "omarchy.keyboard-layout"
+        },
+        {
+          "id": "omarchy.system-update"
+        },
+        {
+          "id": "omaplug"
+        },
+        {
+          "id": "omarchy.weather"
+        },
+        {
+          "id": "omarchy.tray"
+        },
+        {
+          "id": "jesusarchive.keyboard-layout-switcher"
+        },
+        {
+          "id": "crmne.hyprmoncfg"
+        },
+        {
+          "id": "local.collapser"
+        },
+        {
+          "id": "meviusisback.hw-monitor",
+          "tempFormat": "degree-unit",
+          "ramFormat": "percent",
+          "showGpuTemp": false,
+          "showClocks": false,
+          "showGpu": true,
+          "showCpu": true,
+          "showCpuTemp": false,
+          "mode": "icons",
+          "showGauges": false,
+          "gpu": "nvidia"
+        },
+        {
+          "id": "omarchy.agents"
+        },
+        {
+          "id": "omarchy.bluetooth"
+        },
+        {
+          "id": "omarchy.network"
+        },
+        {
+          "id": "omarchy.audio"
+        },
+        {
+          "id": "omarchy.power"
+        }
+      ]
+    },
+    "position": "top",
+    "transparent": false,
+    "id": "io.github.guiestrela.glassbar"
+  },
+  "cloneSourceRestores": [
+    "io.github.sirjul1337.lock-explorer"
+  ],
+  "disabledPlugins": [
+    "omarchy.lock"
+  ],
+  "idle": {
+    "lock": 300,
+    "screensaver": 150
+  },
+  "plugins": [
+    {
+      "design": "neon",
+      "id": "io.github.sirjul1337.lock-explorer"
+    },
+    {
+      "id": "bobbynicholas.omaland"
+    },
+    {
+      "id": "hancore.shibumi.state"
+    },
+    {
+      "id": "hancore.shibumi.reactor"
+    },
+    {
+      "id": "hancore.shibumi.telemetry"
+    },
+    {
+      "id": "hancore.shibumi.power-state"
+    },
+    {
+      "id": "hancore.shibumi.update-center"
+    },
+    {
+      "id": "omarchy.clock"
+    },
+    {
+      "id": "olauncher"
+    }
+  ],
+  "version": 1
+}

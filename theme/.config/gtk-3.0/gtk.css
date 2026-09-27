@@ -1,0 +1,237 @@
+/* Arc Blueberry - GTK3 overrides
+   Background:  #111422   Foreground: #bcc1dc
+   Accent:      #00BFFF   Selection:  #1e2540
+   Border:      #3c4776   Sidebar:    #0d1019
+*/
+
+@define-color bg_color        #111422;
+@define-color fg_color        #bcc1dc;
+@define-color base_color      #111422;
+@define-color text_color      #bcc1dc;
+@define-color selected_bg     #1e2a4a;
+@define-color selected_fg     #00FFFF;
+@define-color accent          #00BFFF;
+@define-color sidebar_bg      #0d1019;
+@define-color border_color    #3c4776;
+@define-color hover_bg        #1a1f35;
+@define-color header_bg       #0d1019;
+
+/* ── Ventana principal ── */
+window, .background {
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+/* ── Header / barra de título ── */
+headerbar, .titlebar {
+    background-color: @header_bg;
+    color: @fg_color;
+    border-bottom: 1px solid @border_color;
+    box-shadow: none;
+}
+
+headerbar button, .titlebar button {
+    background-color: transparent;
+    color: @fg_color;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+headerbar button:hover, .titlebar button:hover {
+    background-color: @hover_bg;
+    border-color: @border_color;
+}
+
+headerbar button:active, .titlebar button:active {
+    background-color: @selected_bg;
+    color: @accent;
+}
+
+/* ── Barra de menú (File, Edit, View...) ── */
+menubar {
+    background-color: @header_bg;
+    color: @fg_color;
+    border-bottom: 1px solid @border_color;
+    padding: 2px 4px;
+}
+
+menubar > menuitem {
+    color: @fg_color;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+menubar > menuitem:hover,
+menubar > menuitem:selected {
+    background-color: @hover_bg;
+    color: @accent;
+}
+
+menubar > menuitem:active {
+    background-color: @selected_bg;
+    color: @selected_fg;
+}
+
+/* ── Barra de herramientas ── */
+toolbar, .toolbar {
+    background-color: @header_bg;
+    border-bottom: 1px solid @border_color;
+}
+
+/* ── Panel lateral (sidebar) ── */
+placessidebar, .sidebar {
+    background-color: @sidebar_bg;
+    color: @fg_color;
+    border-right: 1px solid @border_color;
+}
+
+placessidebar row, .sidebar row {
+    background-color: transparent;
+    color: @fg_color;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+placessidebar row:hover, .sidebar row:hover {
+    background-color: @hover_bg;
+}
+
+placessidebar row:selected, placessidebar row.activatable:selected,
+.sidebar row:selected {
+    background-color: @selected_bg;
+    color: @selected_fg;
+}
+
+/* ── Vista de archivos (lista e íconos) ── */
+.view, iconview, treeview {
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+.view:selected, iconview:selected, treeview:selected {
+    background-color: @selected_bg;
+    color: @selected_fg;
+}
+
+.view row:hover, treeview row:hover {
+    background-color: @hover_bg;
+}
+
+/* ── Encabezados de columna (vista lista) ── */
+treeview header button {
+    background-color: @header_bg;
+    color: @fg_color;
+    border-bottom: 1px solid @border_color;
+    border-right: 1px solid @border_color;
+}
+
+treeview header button:hover {
+    background-color: @hover_bg;
+    color: @accent;
+}
+
+/* ── Ruta de navegación (pathbar) ── */
+.path-bar button, .pathbar button {
+    background-color: transparent;
+    color: @fg_color;
+    border: none;
+    border-radius: 4px;
+}
+
+.path-bar button:hover, .pathbar button:hover {
+    background-color: @hover_bg;
+    color: @accent;
+}
+
+.path-bar button:checked, .pathbar button:checked {
+    background-color: @selected_bg;
+    color: @selected_fg;
+}
+
+/* ── Entradas de texto y búsqueda ── */
+entry {
+    background-color: @sidebar_bg;
+    color: @fg_color;
+    border: 1px solid @border_color;
+    border-radius: 4px;
+    caret-color: @accent;
+}
+
+entry:focus {
+    border-color: @accent;
+    box-shadow: 0 0 0 1px alpha(@accent, 0.4);
+}
+
+/* ── Menús contextuales ── */
+menu, .menu, .context-menu {
+    background-color: @sidebar_bg;
+    color: @fg_color;
+    border: 1px solid @border_color;
+    border-radius: 6px;
+}
+
+menuitem {
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+menuitem:hover {
+    background-color: @selected_bg;
+    color: @selected_fg;
+}
+
+/* ── Separadores ── */
+separator {
+    background-color: @border_color;
+    min-height: 1px;
+}
+
+/* ── Scrollbars ── */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: @border_color;
+    border-radius: 4px;
+    min-width: 6px;
+    min-height: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: @accent;
+}
+
+/* ── Botones generales ── */
+button {
+    background-color: @sidebar_bg;
+    color: @fg_color;
+    border: 1px solid @border_color;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: @hover_bg;
+    border-color: @accent;
+    color: @accent;
+}
+
+button:active, button:checked {
+    background-color: @selected_bg;
+    color: @selected_fg;
+    border-color: @accent;
+}
+
+/* ── Pestañas ── */
+notebook tab {
+    background-color: @sidebar_bg;
+    color: @fg_color;
+    border: 1px solid @border_color;
+    padding: 4px 10px;
+}
+
+notebook tab:checked {
+    background-color: @bg_color;
+    color: @accent;
+    border-bottom-color: @accent;
+}

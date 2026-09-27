@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "local.arch-menu",
+  "name": "Arch Menu",
+  "version": "1.0.0",
+  "author": "local",
+  "description": "Omarchy menu button with the Arch Linux logo",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Arch Menu",
+    "description": "Opens the Omarchy menu, shown as the Arch Linux logo",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}

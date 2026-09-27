@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=OpenClaw
+Terminal=false
+NoDisplay=true
+MimeType=x-scheme-handler/openclaw
+Exec="/home/jpdevopti/Applications/OpenClaw/usr/bin/openclaw-desktop" %u

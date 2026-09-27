@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "local.collapser",
+  "name": "Collapser",
+  "version": "1.0.0",
+  "author": "local",
+  "description": "Smoothly collapse and expand the bar widgets placed before it in the right section.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Collapser",
+    "description": "Animated collapse of the right-section widgets before it",
+    "category": "Layout",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
